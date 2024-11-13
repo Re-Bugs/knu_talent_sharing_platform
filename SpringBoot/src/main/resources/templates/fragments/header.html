@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Header Fragment</title>
+</head>
+<body>
+<div th:fragment="header">
+    <header>
+        <div class="top-links">
+            <a th:if="${isLoggedIn}" href="/mypage">마이페이지</a> <!-- 로그인 되어있으면 마이페이지 표시 -->
+            <a th:unless="${isLoggedIn}" href="/register">회원가입</a> <!-- 로그인 안되어있으면 회원 가입 표시 -->
+            <a th:if="${isLoggedIn}" href="/logout">로그아웃</a> <!-- 로그인 되어있으면 로그아웃 표시 -->
+            <a th:unless="${isLoggedIn}" href="/login">로그인</a> <!-- 로그인 안되어있으면 로그인 표시 -->
+        </div>
+        <div class="header-content">
+            <a href="/" th:href="@{/}">
+                <img th:src="@{/images/logo.png}" alt="로고" style="width: 100px; height: auto; margin-right: 10px;">
+                <h1><a href="/" th:href="@{/}">KNU 재능 공유 플랫폼</a></h1>
+            </a>
+            <div class="search-container">
+                <form th:action="@{/search}" method="get">
+                    <input type="text" name="q" placeholder="검색">
+                    <button type="submit" class="search-button"><img th:src="@{/images/search_img.png}" alt="검색"></button>
+                </form>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">팀 빌딩</a></li>
+                <li><a href="#">러닝코어</a></li>
+                <li><a href="#">메이저러너</a></li>
+                <li><a href="#">챌린지러너</a></li>
+                <li><a href="#">게시판</a></li>
+                <li><a href="#">공지사항</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+</body>
+</html>

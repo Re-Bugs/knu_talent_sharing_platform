@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top-links {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    max-width: 1200px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
+}
+
+.top-links a {
+    color: black;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ccc;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative; /* 상대 위치 설정 */
+}
+
+/* 기존 CSS에 추가할 스타일 */
+.header-content h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Noto Sans KR', 'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif; /* 유사 폰트 설정 */
+}
+
+.header-content h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* 오른쪽으로 정렬 */
+}
+
+.search-container input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    padding: 0;
+}
+
+.search-button img {
+    width: 20px;
+    height: 20px;
+}
+
+nav {
+    background-color: #003346;
+    padding: 10px 20px;
+    height: 45px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 625px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+.content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white; /* 배경 흰색으로 설정 */
+}
