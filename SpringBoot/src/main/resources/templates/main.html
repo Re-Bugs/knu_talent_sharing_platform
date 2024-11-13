@@ -6,38 +6,21 @@
     <title>KNU 재능 공유 플랫폼</title>
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/home_banner.css">
+    <link rel="stylesheet" href="/css/footer.css">
 </head>
 <body>
     <div th:insert="~{fragments/header :: header}"></div>
     <div class="content">
         <!-- 배너 슬라이더 시작 -->
         <div class="banner-slider">
-            <img class="banner-slide active-slide" src="/images/banner/banner1.png" alt="배너 이미지 1">
-            <img class="banner-slide" src="/images/banner/banner2.png" alt="배너 이미지 2">
-            <img class="banner-slide" src="/images/banner/banner3.png" alt="배너 이미지 3">
+            <img class="banner-slide active-slide" src="/images/banner/banner1.png" alt="banner 1">
+            <img class="banner-slide" src="/images/banner/banner2.png" alt="banner 2">
+            <img class="banner-slide" src="/images/banner/banner3.png" alt="banner 3">
         </div>
         <!-- 배너 슬라이더 끝 -->
     </div>
 
-    <script>
-        // 슬라이더 기능 구현
-        let currentSlide = 0;
-        const slides = document.querySelectorAll(".banner-slide");
-        const totalSlides = slides.length;
-
-        function showSlide(index) {
-            // 모든 슬라이드를 숨기고 현재 슬라이드만 표시
-            slides.forEach(slide => slide.classList.remove("active-slide"));
-            slides[index].classList.add("active-slide");
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
-        }
-
-        // 3초마다 슬라이드 전환
-        setInterval(nextSlide, 5000);
-    </script>
+    <div th:insert="~{fragments/footer :: footer}"></div>
+    <script src="/js/banner_slider.js"></script>
 </body>
 </html>

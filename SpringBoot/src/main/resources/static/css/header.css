@@ -76,24 +76,26 @@ body {
 }
 
 nav {
+    position: relative;
     background-color: #003346;
-    padding: 10px 20px;
+    padding: 10px 10px 10px 660px;
     height: 45px;
-    margin: 0 auto;
+    margin: 0 auto; /* 좌우 가운데 정렬 */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
     display: flex;
-    margin: 625px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 nav ul li {
     margin: 0 15px;
+    position: relative;
 }
 
 nav ul li a {
@@ -112,4 +114,39 @@ nav ul li a:hover {
     max-width: 1200px;
     margin: 0 auto;
     background-color: white; /* 배경 흰색으로 설정 */
+}
+.dropdown-menu {
+    display: none; /* 기본적으로 드롭다운 메뉴 숨김 */
+    position: absolute;
+    top: 100%; /* 부모 요소 바로 아래에 위치 */
+    left: 0; /* 부모 요소의 왼쪽에 정렬 */
+    background-color: #003346; /* 드롭다운 메뉴 배경색 */
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 약간의 그림자 */
+    z-index: 1000; /* 드롭다운 메뉴가 다른 요소 위에 표시되도록 */
+    width: 150px; /* 드롭다운 메뉴 너비 */
+}
+
+/* 드롭다운 메뉴 항목 스타일 */
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    display: block;
+    font-size: 18px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #004a5a; /* 드롭다운 항목에 호버 시 색상 변경 */
+}
+
+/* 드롭다운 메뉴 표시 - 부모에 마우스 호버 시 자식 메뉴 표시 */
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
