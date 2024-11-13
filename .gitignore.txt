@@ -42,6 +42,8 @@ SpringBoot/src/main/resources/application.properties
 SpringBoot/src/main/resources/application.yml
 SpringBoot/src/main/resources/application-local.yml
 SpringBoot/src/main/resources/application-prod.yml
+SpringBoot/src/main/resources/application-local.application.properties
+SpringBoot/src/main/resources/application-prod.application.properties
 SpringBoot/log
 SpringBoot/report-images
 database/ignore
