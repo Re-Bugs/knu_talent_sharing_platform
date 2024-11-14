@@ -29,11 +29,6 @@ footer {
     text-decoration: none;
 }
 
-.footer-section a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-}
-
 .footer-bottom {
     margin-top: 20px;
     font-size: 12px;

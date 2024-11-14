@@ -102,18 +102,11 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 24px;
+    margin-right: 10px;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
-}
-.content {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: white; /* 배경 흰색으로 설정 */
 }
 .dropdown-menu {
     display: none; /* 기본적으로 드롭다운 메뉴 숨김 */
@@ -137,7 +130,7 @@ nav ul li a:hover {
 .dropdown-menu li a {
     color: white;
     text-decoration: none;
-    padding: 8px 20px;
+    padding: 10px 20px;
     display: block;
     font-size: 18px;
 }
